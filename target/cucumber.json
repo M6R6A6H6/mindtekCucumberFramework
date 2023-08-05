@@ -1,0 +1,196 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-08-02T20:20:09.827Z",
+        "line": 4,
+        "name": "Validating login functionality with valid credentials",
+        "description": "",
+        "id": "validating-login-functionality;validating-login-functionality-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 41871000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to application",
+            "match": {
+              "location": "steps.WebOrdersSteps.user_navigates_to_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1358000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User logs in with username \"Tester\" and password \"test\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Tester\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"test\"",
+                  "offset": 49
+                }
+              ],
+              "location": "steps.WebOrdersSteps.user_logs_in_with_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Web Orders]\u003e but was:\u003c[Could not allocate space for object \u0027dbo.orders\u0027 in database \u0027tcOrdersSample\u0027 because the \u0027PRIMARY\u0027 filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat steps.WebOrdersSteps.user_is_successfully_logged_in_and_land_on_the_home_page(WebOrdersSteps.java:41)\n\tat ✽.User is successfully logged in and  land on the home page(file:///Users/abbosyoriev/IdeaProjects/mindtekCucumberFramework/src/test/resources/features/WebOrdersLogin.feature:7)\n",
+              "duration": 13000000,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "User is successfully logged in and  land on the home page",
+            "match": {
+              "location": "steps.WebOrdersSteps.user_is_successfully_logged_in_and_land_on_the_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression"
+          },
+          {
+            "name": "@ui"
+          },
+          {
+            "name": "@MB-70"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@loginPositive"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-08-02T20:20:53.226Z",
+        "line": 9,
+        "name": "Validating login functionality with invalid credentials",
+        "description": "",
+        "id": "validating-login-functionality;validating-login-functionality-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 83000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User navigates to application",
+            "match": {
+              "location": "steps.WebOrdersSteps.user_navigates_to_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 252000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User logs in with username \"Tester\" and password \"Testers\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Tester\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Testers\"",
+                  "offset": 49
+                }
+              ],
+              "location": "steps.WebOrdersSteps.user_logs_in_with_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 64000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User validates error messages \"Invalid Login or Password.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Login or Password.\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.WebOrdersSteps.user_validates_error_messages(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression"
+          },
+          {
+            "name": "@ui"
+          },
+          {
+            "name": "@MB-70"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@loginNegative"
+          },
+          {
+            "name": "@MB-70"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Login Functionality",
+    "description": "",
+    "id": "validating-login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/WebOrdersLogin.feature",
+    "tags": [
+      {
+        "name": "@regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 2
+        }
+      },
+      {
+        "name": "@ui",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 14
+        }
+      },
+      {
+        "name": "@MB-70",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 18
+        }
+      }
+    ]
+  }
+]
