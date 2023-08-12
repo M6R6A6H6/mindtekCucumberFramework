@@ -1,196 +1,159 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-08-02T20:20:09.827Z",
-        "line": 4,
-        "name": "Validating login functionality with valid credentials",
+        "start_timestamp": "2023-08-11T00:56:29.599Z",
+        "line": 22,
+        "name": "Validating PUT booking Api call",
         "description": "",
-        "id": "validating-login-functionality;validating-login-functionality-with-valid-credentials",
+        "id": "validating-yard-api-calls;validating-put-booking-api-call",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 41871000000,
+              "duration": 3577000000,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User navigates to application",
+            "line": 23,
+            "name": "user creates booking with POST api call with data",
             "match": {
-              "location": "steps.WebOrdersSteps.user_navigates_to_application()"
+              "location": "steps.BookingAPITest.user_creates_booking_with_post_api_call_with_data(io.cucumber.datatable.DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "Jim"
+                ]
+              },
+              {
+                "cells": [
+                  "lastname",
+                  "Brown"
+                ]
+              },
+              {
+                "cells": [
+                  "totalprice",
+                  "100"
+                ]
+              },
+              {
+                "cells": [
+                  "checkin",
+                  "2019-03-09"
+                ]
+              },
+              {
+                "cells": [
+                  "checkout",
+                  "2020-09-09"
+                ]
+              },
+              {
+                "cells": [
+                  "additionalneeds",
+                  "Taco"
+                ]
+              }
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1358000000,
+              "duration": 429000000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "User logs in with username \"Tester\" and password \"test\"",
+            "line": 30,
+            "name": "user updates booking with PUT api call with data",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Tester\"",
-                  "offset": 27
-                },
-                {
-                  "val": "\"test\"",
-                  "offset": 49
-                }
-              ],
-              "location": "steps.WebOrdersSteps.user_logs_in_with_username_and_password(java.lang.String,java.lang.String)"
+              "location": "steps.BookingAPITest.user_updates_booking_with_put_api_call_with_data(io.cucumber.datatable.DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "James"
+                ]
+              },
+              {
+                "cells": [
+                  "checkin",
+                  "2023-02-02"
+                ]
+              },
+              {
+                "cells": [
+                  "checkout",
+                  "2023-03-03"
+                ]
+              }
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Web Orders]\u003e but was:\u003c[Could not allocate space for object \u0027dbo.orders\u0027 in database \u0027tcOrdersSample\u0027 because the \u0027PRIMARY\u0027 filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat steps.WebOrdersSteps.user_is_successfully_logged_in_and_land_on_the_home_page(WebOrdersSteps.java:41)\n\tat ✽.User is successfully logged in and  land on the home page(file:///Users/abbosyoriev/IdeaProjects/mindtekCucumberFramework/src/test/resources/features/WebOrdersLogin.feature:7)\n",
-              "duration": 13000000,
-              "status": "failed"
+              "duration": 293000000,
+              "status": "passed"
             },
-            "line": 7,
-            "name": "User is successfully logged in and  land on the home page",
+            "line": 34,
+            "name": "user gets updated booking with GET api call",
             "match": {
-              "location": "steps.WebOrdersSteps.user_is_successfully_logged_in_and_land_on_the_home_page()"
+              "location": "steps.BookingAPITest.user_gets_updated_booking_with_get_api_call()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 86000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user validates 200 status code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "steps.BookingAPITest.user_validates_status_code(java.lang.Integer)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 77000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "user validates updated data matches with response of get call",
+            "match": {
+              "location": "steps.BookingAPITest.user_validates_updated_data_matches_with_response_of_get_call()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@regression"
-          },
-          {
-            "name": "@ui"
-          },
-          {
-            "name": "@MB-70"
+            "name": "@MB-111"
           },
           {
             "name": "@smoke"
           },
           {
-            "name": "@loginPositive"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2023-08-02T20:20:53.226Z",
-        "line": 9,
-        "name": "Validating login functionality with invalid credentials",
-        "description": "",
-        "id": "validating-login-functionality;validating-login-functionality-with-invalid-credentials",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 83000000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "User navigates to application",
-            "match": {
-              "location": "steps.WebOrdersSteps.user_navigates_to_application()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 252000000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User logs in with username \"Tester\" and password \"Testers\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Tester\"",
-                  "offset": 27
-                },
-                {
-                  "val": "\"Testers\"",
-                  "offset": 49
-                }
-              ],
-              "location": "steps.WebOrdersSteps.user_logs_in_with_username_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 64000000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "User validates error messages \"Invalid Login or Password.\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Invalid Login or Password.\"",
-                  "offset": 30
-                }
-              ],
-              "location": "steps.WebOrdersSteps.user_validates_error_messages(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@regression"
-          },
-          {
-            "name": "@ui"
-          },
-          {
-            "name": "@MB-70"
-          },
-          {
-            "name": "@smoke"
-          },
-          {
-            "name": "@loginNegative"
-          },
-          {
-            "name": "@MB-70"
+            "name": "@api"
           }
         ]
       }
     ],
-    "name": "Validating Login Functionality",
+    "name": "Validating Yard Api calls",
     "description": "",
-    "id": "validating-login-functionality",
+    "id": "validating-yard-api-calls",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/WebOrdersLogin.feature",
-    "tags": [
-      {
-        "name": "@regression",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 2
-        }
-      },
-      {
-        "name": "@ui",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 14
-        }
-      },
-      {
-        "name": "@MB-70",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 18
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/BookinAPItest.feature",
+    "tags": []
   }
 ]

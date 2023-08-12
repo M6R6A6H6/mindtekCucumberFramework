@@ -14,16 +14,16 @@ public class JDBCUtils {
 
    public static void establishConnection() throws SQLException {
         connection = DriverManager.getConnection(
-                "jdbc:postgresql://localhost:5432/HR_",
-                "postgres",
-                "Admin123");
+                ConfigReader.getProperty("DBURL"),
+                ConfigReader.getProperty("DBUserName"),
+                ConfigReader.getProperty("DBPassword"));
 
         statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
     }
 
     public static List<Map<String, Object>> runQuery(String query) throws SQLException {
-         resultSet = statement.executeQuery("select * from employees");
+       // resultSet = statement.executeQuery("select * from yards");
 
 
         List<Map<String, Object>>  tableData = new ArrayList<>();

@@ -63,24 +63,34 @@ public void user_validates_search_result_contains(DataTable data) {
     }
     @When("User clicks on {string} module")
     public void user_clicks_on_module(String module) {
-        if (module.equals("Fashion Favorites")) {
-            etsyHomePage.fashionFavoritesTab.click();
-        } else if (module.equals("Jewelry & Accessories")) {
-            etsyHomePage.jewelryAccessoriesTab.click();
-        } else if (module.equals("Clothing & Shoes")) {
-            etsyHomePage.clothingShoesTab.click();
-        } else if (module.equals("Home & Living")) {
-            etsyHomePage.homeLiving.click();
-        } else if (module.equals("Wedding & Party")) {
-            etsyHomePage.weddingPartyTab.click();
-        } else if (module.equals("Toys & Entertainment")) {
-            etsyHomePage.toysEntertainment.click();
-        } else if (module.equals("Art & Collectibles")) {
-            etsyHomePage.artCollectible.click();
-        } else if (module.equals("Craft Supplies")) {
-            etsyHomePage.craftSuppliesTab.click();
-        } else if (module.equals("Gifts & Gift Cards")) {
-            etsyHomePage.giftsGiftCardTab.click();
+        switch (module) {
+            case "Fashion Favorites":
+                etsyHomePage.fashionFavoritesTab.click();
+                break;
+            case "Jewelry & Accessories":
+                etsyHomePage.jewelryAccessoriesTab.click();
+                break;
+            case "Clothing & Shoes":
+                etsyHomePage.clothingShoesTab.click();
+                break;
+            case "Home & Living":
+                etsyHomePage.homeLiving.click();
+                break;
+            case "Wedding & Party":
+                etsyHomePage.weddingPartyTab.click();
+                break;
+            case "Toys & Entertainment":
+                etsyHomePage.toysEntertainment.click();
+                break;
+            case "Art & Collectibles":
+                etsyHomePage.artCollectible.click();
+                break;
+            case "Craft Supplies":
+                etsyHomePage.craftSuppliesTab.click();
+                break;
+            case "Gifts & Gift Cards":
+                etsyHomePage.giftsGiftCardTab.click();
+                break;
         }
     }
 

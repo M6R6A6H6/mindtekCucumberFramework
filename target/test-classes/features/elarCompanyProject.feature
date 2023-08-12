@@ -1,7 +1,7 @@
 @regression @smoke @M88-48
 Feature: Testing Add Company functionality
 
-  Scenario: User can add a company
+    Scenario: User can add a company
     Given User is on the login page of the application
     When User enters login username "student@mindtekbootcamp.com" and password "ilovejava" and clicks sign in BTN
     Then User is landed to the application page
